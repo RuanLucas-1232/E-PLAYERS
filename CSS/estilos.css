@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Roboto-Regular';/*nomeia a font*/
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.header-flex {
+    display: flex;
+    height: 85px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 280px;
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+header {
+    background-color: #000000;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Roboto-Regular;
+    
+}
+
+body{
+    background-color: #1E1C21;
+}
+
+.body-image{
+    max-width: 1200px;
+}
+
+body div header{
+    background-color: black;
+    max-width: 1200px;
+}
+
+.banner{
+    height: 610px;
+    background-image: url(../images/banner_pilotos.png);
+}
