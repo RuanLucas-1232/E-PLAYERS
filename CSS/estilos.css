@@ -3,13 +3,18 @@
     src: url(../fonts/Roboto/Roboto-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Titilium-Web';
+    src: url(../fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container-grid {
+.containner-grid {
     max-width: 1200px;
     margin: 0 auto;
     /* border: 1px solid red; */
@@ -35,7 +40,7 @@ header .menu {
 }
 
 header {
-    background-color: #000000;
+    background-color: #1A1A1A;
 }
 
 header nav a {
@@ -46,12 +51,13 @@ header nav a {
     
 }
 
-body{
-    background-color: #1E1C21;
-}
+/* body{
+    background-color: #1A1A1A;
+} */
 
 .body-image{
     max-width: 1200px;
+    font-family: Roboto-Regular;
 }
 
 body div header{
@@ -59,7 +65,87 @@ body div header{
     max-width: 1200px;
 }
 
-.banner{
+/* .banner{
     height: 610px;
     background-image: url(../images/banner_pilotos.png);
+} */
+
+.carousel-item img{
+    height: 610px;
+}
+
+.banner .banner-info-box{
+    display: flex;
+    justify-content: end;
+    height: 610px;
+    align-items: center;
+    /* max-width: 1200px;
+    margin: 0 auto; */
+}
+
+.banner .banner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 280px;
+    border: 1px solid transparent;
+}
+
+.banner-info h1 {
+    color: white;
+    text-decoration: none;
+    font-family: Titilium-Web;
+    font-size: 60px;
+}
+
+.banner-info p {
+    color: white;
+    text-decoration: none;
+    font-family: Titilium-Web;
+    font-size: 19px;
+}
+
+.banner-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #C91919;
+    background-color: #C91919;
+    border-radius: 6px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-family: 'Titilium-Web';
+    margin-top: 40px;
+}
+
+.patrocinados{
+    background-color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.patrocinados-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* *****************Produtos************ */
+
+.Produtos{
+    background-color: #1A1A1A;
+}
+
+.container{
+    max-width: 1200px;
+}
+
+.card{
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-bottom: 20px;   
+    box-shadow: 1px 1px 13px black;
 }
