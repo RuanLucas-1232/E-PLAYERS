@@ -1,5 +1,6 @@
 @font-face {
-    font-family: 'Roboto-Regular';/*nomeia a font*/
+    font-family: 'Roboto-Regular';
+    /*nomeia a font*/
     src: url(../fonts/Roboto/Roboto-Regular.ttf);
 }
 
@@ -14,12 +15,19 @@
     box-sizing: border-box;
 }
 
+/* Altura da página */
+html {
+    height: 0;
+}
+
+/* Container geral */
 .containner-grid {
     max-width: 1200px;
     margin: 0 auto;
     /* border: 1px solid red; */
 }
 
+/* Cabeçalho */
 .header-flex {
     display: flex;
     height: 85px;
@@ -27,10 +35,12 @@
     align-items: center;
 }
 
+/* Logo da página */
 header .logo {
     width: 280px;
 }
 
+/* Menu */
 header .menu {
     display: flex;
     justify-content: space-between;
@@ -43,24 +53,18 @@ header {
     background-color: #1A1A1A;
 }
 
+/* Links do menu */
 header nav a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-family: Roboto-Regular;
-    
+
 }
 
-/* body{
-    background-color: #1A1A1A;
-} */
+/* Corpo da página */
 
-.body-image{
-    max-width: 1200px;
-    font-family: Roboto-Regular;
-}
-
-body div header{
+body div header {
     background-color: black;
     max-width: 1200px;
 }
@@ -70,11 +74,12 @@ body div header{
     background-image: url(../images/banner_pilotos.png);
 } */
 
-.carousel-item img{
+/* Banner */
+.carousel-item img {
     height: 610px;
 }
 
-.banner .banner-info-box{
+.banner .banner-info-box {
     display: flex;
     justify-content: end;
     height: 610px;
@@ -122,30 +127,146 @@ body div header{
     margin-top: 40px;
 }
 
-.patrocinados{
+/* Patrocinados */
+.patrocinados {
     background-color: #000000;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.patrocinados-flex{
+.patrocinados-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/* *****************Produtos************ */
 
-.Produtos{
+/* Produtos */
+
+.Produtos {
     background-color: #1A1A1A;
 }
 
-.container{
+.Produtos #Titulo-produtos {
+    font-family: 'Roboto-Regular';
+    color: white;
+}
+
+.container {
     max-width: 1200px;
 }
 
-.card{
-    border: 1px solid black;
-    border-radius: 6px;
-    margin-bottom: 20px;   
+.card {
     box-shadow: 1px 1px 13px black;
+    margin-top: 20px;
+    background-color: #000000;
+    background-image: linear-gradient(360deg, #111111, transparent);
+}
+
+.Produtos .card-title, .card-text{
+    color: white;
+    font-family: 'Roboto-Regular';
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #560505;
+    border-color: #560505;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #c91919;
+    border-color: #c91919;
+    font-family: 'Roboto-Regular';
+    position: relative;
+    left: 20%;
+}
+
+/* Roda-pé */
+footer {
+    background-color: #000000;
+}
+
+footer p {
+    color: white;
+}
+
+/* Medias */
+@media (max-width: 320px) {
+    .patrocinados-flex img {
+        width: 20%;
+    }
+
+    .banner {
+        height: 610px;
+        background-position: 164% 0;
+        background-size: 63rem 39rem;
+        width: 100%;
+    }
+
+    .banner-info h1 {
+        color: white;
+        text-decoration: none;
+        font-family: Titilium-Web;
+        font-size: 330%;
+    }
+
+    header .logo {
+        width: 60%;
+    }
+}
+
+@media (max-width: 363px) {
+    .banner-info h1 {
+        font-size: 52px;
+    }
+
+    .banner-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-flex>.menu {
+        display: none;
+    }
+
+    .d-none {
+        display: block !important;
+    }
+
+    .patrocinados-flex img {
+        width: 16%;
+    }
+
+    .banner .banner-info-box {
+        display: flex;
+        justify-content: center;
+        height: 610px;
+        align-items: center;
+    }
+
+    .banner {
+        background-position: 13%;
+    }
+}
+
+@media (max-width: 920px) {
+    .patrocinados-flex img {
+        width: 19%;
+    }
+
+    .header-flex .menu {
+        width: 55%;
+    }
+}
+
+@media (min-width: 921px) {
+    .patrocinados-flex img {
+        width: 19%;
+    }
+
+    .header-flex .menu {
+        width: 55%;
+    }
 }
