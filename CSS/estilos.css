@@ -9,6 +9,11 @@
     src: url(../fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -127,6 +132,11 @@ body div header {
     margin-top: 40px;
 }
 
+.banner-info a:hover{
+    background-color: #560505;
+    border: #560505;
+}
+
 /* Patrocinados */
 .patrocinados {
     background-color: #000000;
@@ -149,6 +159,8 @@ body div header {
 .Produtos #Titulo-produtos {
     font-family: 'Roboto-Regular';
     color: white;
+    position: relative;
+    left: 22px;
 }
 
 .container {
@@ -157,14 +169,26 @@ body div header {
 
 .card {
     box-shadow: 1px 1px 13px black;
-    margin-top: 20px;
+    margin-bottom: 30px;;
     background-color: #000000;
     background-image: linear-gradient(360deg, #111111, transparent);
+    max-width: 230px;
 }
 
-.Produtos .card-title, .card-text{
+.Produtos .card-title{
+    color: white;
+    font-family: 'Roboto-Medium';
+    text-transform: uppercase;
+}
+
+.Produtos .card-text{
     color: white;
     font-family: 'Roboto-Regular';
+}
+
+.card .card-price{
+    font-size: 1.5rem;
+    font-family: 'Roboto-Medium';
 }
 
 .btn-primary:hover {
@@ -177,9 +201,9 @@ body div header {
     color: #fff;
     background-color: #c91919;
     border-color: #c91919;
-    font-family: 'Roboto-Regular';
-    position: relative;
-    left: 20%;
+    font-family: 'Roboto-Regular';;
+    text-transform: uppercase;
+    width: 100%;
 }
 
 /* Roda-pé */
