@@ -160,8 +160,6 @@ body div header {
 .Produtos #Titulo-produtos {
     font-family: 'Roboto-Regular';
     color: white;
-    position: relative;
-    left: 22px;
     margin-top: 10px;
 }
 
@@ -173,7 +171,7 @@ body div header {
     box-shadow: 1px 1px 13px black;
     margin-bottom: 30px;;
     background-color: #000000;
-    background-image: linear-gradient(360deg, #111111, transparent);
+    background-image: linear-gradient(360deg, #111111,#5a5959cc, transparent);
     max-width: 230px;
 }
 
@@ -216,6 +214,14 @@ footer {
 footer p {
     color: white;
 }
+
+/* Breakpoints
+
+    celulares 0 - 767px -> telas pequenas
+    tablets 767px - 991px -> telas médias
+    desktop 992px - 8K -> telas grandes
+
+*/
 
 /* Medias */
 @media (max-width: 320px) {
@@ -269,10 +275,6 @@ footer p {
         display: block !important;
     }
 
-    .patrocinados {
-        display: none;
-    }
-
     .banner .banner-info-box {
         display: flex;
         justify-content: center;
@@ -302,5 +304,11 @@ footer p {
 
     .header-flex .menu {
         width: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .patrocinados {
+        display: none;
     }
 }
