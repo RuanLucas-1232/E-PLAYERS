@@ -26,7 +26,7 @@ html {
 }
 
 /* Container geral */
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     /* border: 1px solid red; */
@@ -42,7 +42,7 @@ html {
 
 /* Logo da página */
 header .logo {
-    width: 280px;
+    width: 260px;
 }
 
 /* Menu */
@@ -50,7 +50,7 @@ header .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 47%;
     height: 100%;
 }
 
@@ -132,7 +132,7 @@ body div header {
     margin-top: 40px;
 }
 
-.banner-info a:hover{
+.banner-info a:hover {
     background-color: #560505;
     border: #560505;
 }
@@ -169,24 +169,25 @@ body div header {
 
 .card {
     box-shadow: 1px 1px 13px black;
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
+    ;
     background-color: #000000;
-    background-image: linear-gradient(360deg, #111111,#5a5959cc, transparent);
+    background-image: linear-gradient(360deg, #111111, #5a5959cc, transparent);
     max-width: 230px;
 }
 
-.Produtos .card-title{
+.Produtos .card-title {
     color: white;
     font-family: 'Roboto-Medium';
     text-transform: uppercase;
 }
 
-.Produtos .card-text{
+.Produtos .card-text {
     color: white;
     font-family: 'Roboto-Regular';
 }
 
-.card .card-price{
+.card .card-price {
     font-size: 1.5rem;
     font-family: 'Roboto-Medium';
 }
@@ -201,7 +202,8 @@ body div header {
     color: #fff;
     background-color: #c91919;
     border-color: #c91919;
-    font-family: 'Roboto-Regular';;
+    font-family: 'Roboto-Regular';
+    ;
     text-transform: uppercase;
     width: 100%;
 }
@@ -227,7 +229,7 @@ footer p {
 /* Medias */
 @media (max-width: 320px) {
     .header-flex {
-        height: 60px;
+        height: 80px;
     }
 
     .patrocinados-flex img {
@@ -263,13 +265,16 @@ footer p {
     }
 }
 
-@media (max-width: 768px) {
-    .header-flex>.menu {
-        display: none;
+@media (max-width: 767px) {
+
+    .header-flex .logo {
+        width: 200px;
     }
 
-    header .logo {
-        width: 230px;
+    .menu a {
+        border-left: white 4px dotted !important;
+        padding: 13px !important;
+        margin-bottom: 15px;
     }
 
     .d-none {
@@ -286,6 +291,10 @@ footer p {
     .banner {
         background-position: 13%;
     }
+
+    .menu-bars{
+        width: 30px !important;
+    }
 }
 
 @media (max-width: 920px) {
@@ -298,30 +307,88 @@ footer p {
     }
 }
 
-@media (min-width: 921px) {
-    .patrocinados-flex img {
-        width: 15%;
-    }
-
+/* @media (min-width: 921px) {
     .header-flex .menu {
         width: 55%;
     }
-}
+} */
 
 @media (max-width: 991px) {
-    .patrocinados {
-        display: none;
-    }
-
-    .container, .containner-grid{
+    .container,
+    .containner-grid {
         max-width: 980px;
     }
-}
-
-@media (max-width: 991px) {
     .patrocinados {
         display: none;
     }
-
     
+    .header-flex .menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: 100%;
+        z-index: 10;
+
+        background-color: #1A1A1A;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 20px 50px;
+
+        /* rgba(26, 26, 26,.8) o último parâmetro é a transparecia: vai de 0 - 1*/
+        background-color: rgba(201, 25, 25, .95);
+        border-radius: 0 50px 0 90px;
+        
+        left: -80%;
+        opacity: 0;/*Transparencia. Varia de 0 - 1*/
+        
+        /*Aqui secoloca as propriedades que mudam de valor em algum momento.
+        O left é alterado pela class menu-chamado e é essa alteração que é controlada*/
+        transition: left 500ms, opacity 500ms;
+    }
+    
+    .menu-chamado{
+        left: 0 !important;
+        opacity: 1 !important;
+    }
+
+    .logo-menu{
+        z-index: 11;
+    }
+
+    .menu a {
+        border-left: white 4px dotted;
+        font-size: 1.4rem;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .menu a:hover {
+        background-color: #560505;
+        color: white;
+        border-left: none !important;
+        border-radius: 4px;
+    }
+
+    .menu-bars {
+        display: block;
+        width: 40px;
+        margin-right: 15px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    #menu-ativo{
+        display: none;
+    }
+}
+
+@media (max-width: 1199px)
+{
+    .container{
+        max-width: 980px !important;
+    }
 }

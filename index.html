@@ -17,7 +17,7 @@
 <body>
     <header>
         <!-- Tag de cabeçalho -->
-        <div class="header-flex containner-grid">
+        <div class="header-flex container">
             <img class="logo" src="images/logo.svg" title="Logotipo E-Players" alt="imagem do E-Players">
 
             <nav class="menu">
@@ -28,6 +28,8 @@
                 <a href="#">Resultados</a>
                 <a href="#">Notícias</a>
             </nav>
+
+            <img id="menu-ativo" onclick="chamarMenu()" src="./images/bars.svg" class="menu-bars">
         </div>
     </header>
 
@@ -226,6 +228,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <script src="./SCRIPTS/scripts.js"></script>
 </body>
 
 </html>
