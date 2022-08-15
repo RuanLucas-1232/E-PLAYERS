@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Roboto-Regular';
-    /*nomeia a font*/
+    
     src: url(../fonts/Roboto/Roboto-Regular.ttf);
 }
 
@@ -20,19 +20,19 @@
     box-sizing: border-box;
 }
 
-/* Altura da página */
+
 html {
     height: 0;
 }
 
-/* Container geral */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    /* border: 1px solid red; */
+   
 }
 
-/* Cabeçalho */
+
 .header-flex {
     display: flex;
     height: 85px;
@@ -40,12 +40,12 @@ html {
     align-items: center;
 }
 
-/* Logo da página */
+
 header .logo {
     width: 260px;
 }
 
-/* Menu */
+
 header .menu {
     display: flex;
     justify-content: space-between;
@@ -58,7 +58,7 @@ header {
     background-color: #1A1A1A;
 }
 
-/* Links do menu */
+
 header nav a {
     color: white;
     text-decoration: none;
@@ -68,25 +68,19 @@ header nav a {
 }
 
 header nav a:hover {
-    background-color: #C91919;
-    color: white;
-    border-radius: 12px;
-    padding: 3px
+    color:#C91919; 
 }
 
-/* Corpo da página */
+
 
 body div header {
     background-color: black;
     max-width: 1200px;
 }
 
-/* .banner{
-    height: 610px;
-    background-image: url(../images/banner_pilotos.png);
-} */
 
-/* Banner */
+
+
 .carousel-item img {
     height: 610px;
 }
@@ -96,8 +90,7 @@ body div header {
     justify-content: end;
     height: 610px;
     align-items: center;
-    /* max-width: 1200px;
-    margin: 0 auto; */
+    
 }
 
 .banner .banner-info {
@@ -144,7 +137,7 @@ body div header {
     border: #560505;
 }
 
-/* Patrocinados */
+
 .patrocinados {
     background-color: #000000;
     padding-top: 10px;
@@ -157,7 +150,7 @@ body div header {
     align-items: center;
 }
 
-/* Produtos */
+
 
 .Produtos {
     background-color: #1A1A1A;
@@ -215,7 +208,7 @@ body div header {
     width: 100%;
 }
 
-/* Roda-pé */
+
 footer {
     background-color: #000000;
 }
@@ -237,28 +230,18 @@ main .descricao p {
     font-size: 30px;
     position: relative;
     top: 133px;
-    left: 10rem;
+    left: 99px;
     width: 55rem;
     height: 26rem;
-    margin: 0;
 }
 
 main .descricao img {
     position: relative;
     left: 160px;
-    width: 43rem;
+    width: 27rem;
 }
 
-/* Breakpoints
 
-    celulares 0 - 767px -> telas pequenas
-    tablets 767px - 991px -> telas médias
-    desktop 992px - 1199px -> telas moderadamente grandes
-    telas largas 1200px - 1920px -> telas grandes
-
-*/
-
-/* Medias */
 @media (max-width: 320px) {
     .header-flex {
         height: 80px;
@@ -294,6 +277,12 @@ main .descricao img {
 
     .banner-info p {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 580px) {
+    main .descricao {
+        display: none !important;
     }
 }
 
@@ -339,11 +328,7 @@ main .descricao img {
     }
 }
 
-/* @media (min-width: 921px) {
-    .header-flex .menu {
-        width: 55%;
-    }
-} */
+
 
 @media (max-width: 991px) {
 
@@ -356,26 +341,7 @@ main .descricao img {
         display: none;
     }
 
-    /* 
-.header-flex .menu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 81%;
-    height: 100%;
-    z-index: 10;
-    background-color: #1A1A1A;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    padding: 20px 50px;
-    background-color: rgba(201, 25, 25, .95);
-    border-radius: 0 50px 0 90px;
-    left: -80%;
-    opacity: 0;
-    transition: left 500ms, opacity 500ms;
-}
-*/
+
     .header-flex .menu {
         position: fixed;
         left: 0;
@@ -391,16 +357,13 @@ main .descricao img {
         align-items: stretch;
         padding: 20px 50px;
 
-        /* rgba(26, 26, 26,.8) o último parâmetro é a transparecia: vai de 0 - 1*/
+    
         background-color: rgba(201, 25, 25, .95);
         border-radius: 0 50px 0 90px;
 
         left: -80%;
         opacity: 0;
-        /*Transparencia. Varia de 0 - 1*/
-
-        /*Aqui secoloca as propriedades que mudam de valor em algum momento.
-        O left é alterado pela class menu-chamado e é essa alteração que é controlada*/
+      
         transition: left 500ms, opacity 500ms;
     }
 
@@ -429,19 +392,15 @@ main .descricao img {
         margin-right: 15px;
     }
 
-    main .descricao img {
-        display: none;
-    }
-
     main .descricao p {
         color: white;
-        font-size: 14px;
+        font-size: 20px;
         position: relative;
-        top: 78px;
+        top: 101px;
         left: 1px;
-        width: 392px;
-        height: 2rem;
-        margin: 0;
+        width: 565px;
+        height: 275px;
+        margin: 0 auto;
     }
 
     main .descricao {
@@ -452,6 +411,7 @@ main .descricao img {
     }
 
 }
+
 
 @media (min-width: 992px) {
     #menu-ativo {
@@ -466,5 +426,12 @@ main .descricao img {
 
     .header-flex nav.menu a {
         font-size: 16px;
+    }
+
+}
+
+@media (max-width:1520px) {
+    main .descricao img {
+        display: none;
     }
 }

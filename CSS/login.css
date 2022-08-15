@@ -41,7 +41,7 @@ body{
     padding-bottom: 20px;
 }
 
-/* Seleciona o primeiro componente com a class linha */
+
 .linha:first-of-type{
     border-bottom: 1px solid #a0824d;
 }
