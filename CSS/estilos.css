@@ -64,10 +64,10 @@ header nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: Roboto-Regular;
-    
+
 }
 
-header nav a:hover{
+header nav a:hover {
     background-color: #C91919;
     color: white;
     border-radius: 12px;
@@ -224,7 +224,7 @@ footer p {
     color: white;
 }
 
-main .descricao{
+main .descricao {
     display: flex;
 
     background-image: url(../images/fundo-sobre.png);
@@ -232,7 +232,7 @@ main .descricao{
     height: 75vh;
 }
 
-main .descricao p{
+main .descricao p {
     color: white;
     font-size: 30px;
     position: relative;
@@ -243,7 +243,7 @@ main .descricao p{
     margin: 0;
 }
 
-main .descricao img{
+main .descricao img {
     position: relative;
     left: 160px;
     width: 43rem;
@@ -324,7 +324,7 @@ main .descricao img{
         background-position: 13%;
     }
 
-    .menu-bars{
+    .menu-bars {
         width: 30px !important;
     }
 }
@@ -346,19 +346,41 @@ main .descricao img{
 } */
 
 @media (max-width: 991px) {
+
     .container,
     .containner-grid {
         max-width: 980px;
     }
+
     .patrocinados {
         display: none;
     }
-    
+
+    /* 
+.header-flex .menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 81%;
+    height: 100%;
+    z-index: 10;
+    background-color: #1A1A1A;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px 50px;
+    background-color: rgba(201, 25, 25, .95);
+    border-radius: 0 50px 0 90px;
+    left: -80%;
+    opacity: 0;
+    transition: left 500ms, opacity 500ms;
+}
+*/
     .header-flex .menu {
         position: fixed;
         left: 0;
         top: 0;
-        width: 80%;
+        width: 81%;
         height: 100%;
         z-index: 10;
 
@@ -372,16 +394,17 @@ main .descricao img{
         /* rgba(26, 26, 26,.8) o último parâmetro é a transparecia: vai de 0 - 1*/
         background-color: rgba(201, 25, 25, .95);
         border-radius: 0 50px 0 90px;
-        
+
         left: -80%;
-        opacity: 0;/*Transparencia. Varia de 0 - 1*/
-        
+        opacity: 0;
+        /*Transparencia. Varia de 0 - 1*/
+
         /*Aqui secoloca as propriedades que mudam de valor em algum momento.
         O left é alterado pela class menu-chamado e é essa alteração que é controlada*/
         transition: left 500ms, opacity 500ms;
     }
-    
-    .menu-chamado{
+
+    .menu-chamado {
         left: 0 !important;
         opacity: 1 !important;
     }
@@ -406,21 +429,42 @@ main .descricao img{
         margin-right: 15px;
     }
 
+    main .descricao img {
+        display: none;
+    }
+
+    main .descricao p {
+        color: white;
+        font-size: 14px;
+        position: relative;
+        top: 78px;
+        left: 1px;
+        width: 392px;
+        height: 2rem;
+        margin: 0;
+    }
+
+    main .descricao {
+        display: flex;
+        background-image: url(../images/fundo-sobre.png);
+        background-repeat: round;
+        height: 50vh;
+    }
+
 }
 
 @media (min-width: 992px) {
-    #menu-ativo{
+    #menu-ativo {
         display: none;
     }
 }
 
-@media (max-width: 1199px)
-{
-    .container{
+@media (max-width: 1199px) {
+    .container {
         max-width: 980px !important;
     }
 
-    .header-flex nav.menu a{
+    .header-flex nav.menu a {
         font-size: 16px;
     }
 }
