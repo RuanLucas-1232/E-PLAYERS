@@ -280,7 +280,7 @@ main .descricao img {
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 590px) {
     main .descricao {
         display: none !important;
     }
